@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERRAJERO S.A.S | Registrarse</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="{{ url_for('static', filename='image/HERRAJERO_LOGO.png') }}" alt="Logo">
+            <nav>
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                {% if 'usuario_id' not in session %}
+                    <a href="{{ url_for('login') }}">Iniciar sesion</a>
+                {% endif %}
+                <a href="{{ url_for('productos') }}">Herramientas</a>
+                <a href="{{ url_for('construccion') }}">Construcción</a>
+                <a href="{{ url_for('electricidad') }}">Electricidad</a>
+                <a href="{{ url_for('cliente') }}"><img src="{{ url_for('static', filename='image/carro.png') }}" alt="carrito"></a>
+            </nav>
+        </div>
+    </header>
+    <section class="contenido">
+
+        <div class="formulario">
+            <h1>Formulario de registro</h1>
+            <form action="/register" method="post"><!--Los datos dentro de la etiqueta se envian al servidor-->
+                 <audio src="" autoplay loop></audio>
+                <div class="username">
+                    <img src="{{ url_for('static', filename='image/bxs-userf.png') }}" alt="" class="icon">
+                    <input type="text" name="nombre" required placeholder="Nombre">
+                </div>
+                <div class="password">
+                    <img src="{{ url_for('static', filename='image/bxs-userf.png') }}" alt="" class="icon">
+                    <input type="text" name="apellido" required placeholder="Apellido">
+                </div>
+                <div class="password">
+                    <img src="{{ url_for('static', filename='image/bxs-homed.png') }}" alt="" class="direccion">
+                    <input type="text" name="direccion" required placeholder="Cra 45T # 45-45">
+                </div>
+                <div class="password">
+                    <img src="{{ url_for('static', filename='image/bx-mobileg.png') }}" alt="" class="telefono">
+                    <input type="text" name="telefono" required placeholder="Telefono">
+                </div>
+                <div class="password">
+                    <img src="{{ url_for('static', filename='image/bxs-lock-alt.png') }}" alt="" class="icon">
+                    <input type="password" name="password" required placeholder="Contraseña">
+                </div>
+                <div class="input-control">
+                    <label for="">Fecha de Nacimiento</label>
+                    <input type="date" name="fecha_nacimiento" id="" required>
+                </div>
+                <div class="input-control">
+                    <label for="lblCorreo">Correo electrónico</label>
+                    <input type="email" name="email" id="txtCorreo" placeholder="someone@email.com" required>
+                </div>
+                <div class="login">
+                    <input type="submit" value="Regristrarse">
+                </div>
+                <div class="recordar">
+                    <a href="./ingreso.html">Iniciar sesión</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer id="pie_pagina">
+        <div class="icono_red">
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="" class="links">Inicio</a>
+            
+            <a href="#!" class="links">Contáctenos</a>
+
+            <a href="/herrajero_inicio_sesion/Login/Ingreso.html" class="links">Iniciar sesión</a>
+        </div>
+        <div class="copyr">
+            <p class="copy">&#169; | 2025 | Hillary Arraut, Adolfo Lecompte, Anuar Martínez, Esteban Redondo, Laura Reguillo, Deivis Yepez. </p>
+        </div>
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    background-color: azure;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+nav img{
+    height: 25px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+header a{
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2f4958;
+    transition: 0.5s;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+header a:hover{
+    color: whitesmoke;
+    background-color: #2f4958;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.contenido{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("image/J4GM4UMBFVBCXNICOFY55KVABE.avif");
+}
+
+
+.formulario{
+    width: 340px;
+    height: 370px;
+    background:#f8ec4d;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.formulario h1{
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 2rem;
+}
+.formulario form{
+    padding: 0, 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+.username{
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+.icon_correo{
+    width: 10%;
+    margin: 0;
+    padding: 0;
+}
+.icon_clave{
+    width: 90%;
+}
+.icon_correo img, .icon_clave img{
+    width: 100%;
+    left: 100%;
+}
+input[type="text"]{
+    padding: 3px 5px;
+    border-radius: 15px;
+    border-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+
+}
+.password{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.login{
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+}
+
+input[type="submit"]{
+    top: 50%;
+    left: 28%;
+    width: 40%;
+    height: 30px;
+    border-style: none;
+    background-color: #2f4958;
+    border-radius: 25px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type="submit"]:hover{
+    background-color: white;
+    color: #2f4958;
+    padding: 0px 25px;
+}
+
+.remember{
+    margin: 10px;
+    text-align: center;
+}
+.recordar, a{
+    text-align: center;
+    margin: 5px;
+    text-decoration: none;
+}
+.registro{
+    text-align: center;
+}
+
+#pie_pagina{
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #2f4958;
+    color: whitesmoke;
+}
+
+.icono_red{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;  
+}
+.logo_icono{
+    list-style-type: none;
+}
+
+.icono_elemento{
+    color: whitesmoke;
+    font-size: 40px;
+    display: inline-block;
+    margin: 0 15px;
+    transition: 0.2s;
+}
+
+.icono_elemento:hover{
+    transform: translateY(-10px)
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.elementos_menu{
+    list-style: none;
+}
+
+.links{
+    color: whitesmoke;
+    font-size: 25;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.links:hover{
+    background-color: whitesmoke;
+    color: #2f4958;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.copyr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.copy{
+    font-size: 20px;
+    margin: 0;
+}

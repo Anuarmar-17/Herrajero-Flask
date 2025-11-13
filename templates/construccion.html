@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_construccion.css') }}">
+    <title>HERRAJERO S.A.S | Construcción</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="{{ url_for('static', filename='image/HERRAJERO_LOGO.png') }}" alt="Logo">
+            <nav>
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                {% if 'usuario_id' not in session %}
+                    <a href="{{ url_for('login') }}">Iniciar sesion</a>
+                    <a href="{{ url_for('register') }}">Registrarse</a>
+                {% endif %}
+                <a href="{{ url_for('productos') }}">Herramientas</a>
+                <a href="{{ url_for('electricidad') }}">Electricidad</a>
+                <a href="{{ url_for('cliente') }}"><img src="{{ url_for('static', filename='image/carro.png') }}" alt="carrito"></a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="banner">
+        <h1>
+            Catalogo de construccion
+        </h1>
+    </section>
+
+    <main>
+        <div class="block_container">
+            <div class="block_category">
+                <h3>Categoria</h3>
+                <ul class="category">
+                    <li class="category_">
+                        <a href="{{ url_for('productos') }}">Herramientas</a>
+                    </li>
+                    <li class="category_">
+                        <a href="{{ url_for('construccion') }}">Construcción</a>
+                    </li>
+                    <li class="category_">
+                        <a href="{{ url_for('electricidad') }}">Electricidad</a>
+                    </li>
+                    <li class="category_"></li>
+                    <li class="category_"></li>
+                </ul>
+            </div>
+            <div class="block_product">
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://ferropaz.com/img/p/3/7/37-large_default.jpg" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Cemento Argos</h4>
+                        <p>Cemento Gris Uso Estructural 42,5kg</p>
+                        <button class="agg_carrito">$ 31.800 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://chp.com.co/wp-content/uploads/2023/08/CEMENTO-HOLCIM-FUERTE-ECO-PLANET-X-50KG.png" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Cemento Holcim</h4>
+                        <p>Cemento holcim fuerte eco planet 50KG</p>
+                        <button class="agg_carrito">$ 33.900 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://grupoferropaz.com/wp-content/uploads/2020/01/cemento-alion.jpg" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Cemento Alion</h4>
+                        <p>Cemento Gris Alion Uso General 50kg</p>
+                        <button class="agg_carrito">$ 28.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://proarcave.com/wp-content/uploads/2022/11/Cemento-Gris.jpg" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Cemento CSC</h4>
+                        <p>Saco de Cemento Gris 42,5 Kg. CSC</p>
+                        <button class="agg_carrito">$ 38.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://ve.epaenlinea.com/media/catalog/product/cache/9de02ba98484dc90d74f47a4b2fb992a/8/e/8ee96757-d241-4e1e-a8aa-0c79151d89ef.jpg" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Bloque de concreto liso</h4>
+                        <p>Bloque de concreto liso gris 15 x 20 x 30</p>
+                        <button class="agg_carrito">$ 2.400 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+                
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://cdnx.jumpseller.com/prefabricados-peniel/image/19984028/resize/540/540?1692218906" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Bloque de concreto</h4>
+                        <p>Bloque liso estructural de concreto 19x19x39</p>
+                        <button class="agg_carrito">$ 5.200 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://gt.epaenlinea.com/media/catalog/product/cache/30664c2942134e85a6c4c14e3163908b/1/d/1dcd24c6-7b45-4521-a8b0-e060f4b2ef9f.jpg" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Ladrillo arcilla</h4>
+                        <p>Ladrillo arcilla 6.5 x 11 x 23cm</p>
+                        <button class="agg_carrito">$ 1.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://dtisas.com.co/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzM5NDU4LCJwdXIiOiJibG9iX2lkIn19--b3d31513c48e82e1d2836c207cacb872f544949c/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzYwMCw2MDBdfSwicHVyIjoidmFyaWF0aW9uIn19--f071e30ecad735fd2ab55c9d9f5412fe02d64321/nueva-imagen%20(5).png?locale=es" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Ladrillo Bloque</h4>
+                        <p>Ladrillo 8 X 12 X 24cm bloque</p>
+                        <button class="agg_carrito">$ 1.350 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="pie_pagina">
+    <ul class="icono_red">
+        <li class="logo_icono">
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+        </li>
+        <li class="logo_icono">
+              <a href="" class="icono_elemento">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </li>
+        <li class="logo_icono">
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+        </li>
+        <li class="logo_icono">
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li class="elementos_menu">
+           <a href="" class="links">Inicio</a>
+        </li>
+        <li class="elementos_menu">
+           <a href="" class="links">Contáctenos</a>
+        </li>
+        <li class="elementos_menu">
+           <a href="" class="links">Iniciar sesión</a>
+        </li>
+    </ul>
+    <h4 class="copy">&#169; | 2025 | Hillary Arraut, Adolfo Lecompte, Anuar Martínez, Esteban Redondo, Laura Reguillo, Deivis Yepez. </h4>
+
+    </footer>
+    <script src="../static/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

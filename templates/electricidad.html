@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_electricidad.css') }}">
+    <title>HERRAJERO S.A.S | Construcción</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="{{ url_for('static', filename='image/HERRAJERO_LOGO.png') }}" alt="Logo">
+            <nav>
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                {% if 'usuario_id' not in session %}
+                    <a href="{{ url_for('login') }}">Iniciar sesion</a>
+                    <a href="{{ url_for('register') }}">Registrarse</a>
+                {% endif %}
+                <a href="{{ url_for('productos') }}">Herramientas</a>
+                <a href="{{ url_for('construccion') }}">construcción</a>
+                <a href="{{ url_for('cliente') }}"><img src="{{ url_for('static', filename='image/carro.png') }}" alt="carrito"></a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="banner">
+        <h1>
+            Catalogo de Electricidad
+        </h1>
+    </section>
+
+    <main>
+        <div class="block_container">
+            <div class="block_category">
+                <h3>Categoria</h3>
+                <ul class="category">
+                    <li class="category_">
+                        <a href="{{ url_for('productos') }}">Herramientas</a>
+                    </li>
+                    <li class="category_">
+                        <a href="{{ url_for('construccion') }}">Construcción</a>
+                    </li>
+                    <li class="category_">
+                        <a href="{{ url_for('electricidad') }}">Electricidad</a>
+                    </li>
+                    <li class="category_"></li>
+                    <li class="category_"></li>
+                </ul>
+            </div>
+            <div class="block_product">
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://www.e-vatio.com/cdn/shop/products/01_e4d9b0c2-1a1a-4d8e-ab7e-b84731687943.jpg?v=1648135708" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Bombilla led</h4>
+                        <p>Bombillo led 7W E27 6400°k</p>
+                        <button class="agg_carrito">$ 3.500 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://www.e-vatio.com/cdn/shop/products/plantillaproductos-21_c5f2b97f-515b-475f-91ce-262e93fe9a43_compact.jpg?v=1648150295" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Bombillo led G45</h4>
+                        <p>Bombillo led G45 vintage 4W E27 2700°k</p>
+                        <button class="agg_carrito">$ 7.900 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://www.e-vatio.com/cdn/shop/products/plantillaproductos-53_dd12f88b-08ee-48b6-a215-3e3b0068ec91_compact.jpg?v=1648656904" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Luminaria led</h4>
+                        <p>Luminaria led 18W antipolvo</p>
+                        <button class="agg_carrito">$ 14.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://www.e-vatio.com/cdn/shop/products/plantillaproductos-47_75ac6c66-13c9-4ef1-a728-9408b8b3d34b_compact.jpg?v=1648304078" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Panel led</h4>
+                        <p>Panel led 18W redondo de incrustar</p>
+                        <button class="agg_carrito">$ 14.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIlnyn96iheb4WxAEkIYpPLd6uz9XefEqofDqTkqzaQrH2vBJtQ94mciU6L-QzGR_lDY&usqp=CAU" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Cable Acometida Concentrico</h4>
+                        <p>Cable Acometida Concentrico 2x8 mas 8 Bifasico Cobre Metro x8 8</p>
+                        <button class="agg_carrito">$ 25.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+                
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://www.electrovera.com/wp-content/uploads/2021/10/HOM130_TACO_ENCHUFABLE_1P_30A_120VAC-10kA_ELECTROVERA.png" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>CCTO ENCHUF.1030</h4>
+                        <p>El Mini Breaker Homline de Schneider Electric de baja tensión, protección contra sobrecargas </p>
+                        <button class="agg_carrito">$ 15.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://cdnx.jumpseller.com/ace-comaderas/image/35315234/12545.png?1693843754" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Tablero Bifásico de 4 </h4>
+                        <p>Tablero Bifásico de 4 Circuitos - 75 A -120/240 VAC - 60 Hz - 19 x 22 x 6 cm marca Tercol.</p>
+                        <button class="agg_carrito">$ 43.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://cdnx.jumpseller.com/ace-comaderas/image/35572859/12535.png?1693843685" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Tablero Bifásico de 12</h4>
+                        <p>Tablero Bifásico de 12 Circuitos con Tapa Policarbonato - 95 A marca Tercol. </p>
+                        <button class="agg_carrito">$ 103.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="pie_pagina">
+    <ul class="icono_red">
+        <li class="logo_icono">
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+        </li>
+        <li class="logo_icono">
+              <a href="" class="icono_elemento">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </li>
+        <li class="logo_icono">
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+        </li>
+        <li class="logo_icono">
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li class="elementos_menu">
+           <a href="" class="links">Inicio</a>
+        </li>
+        <li class="elementos_menu">
+           <a href="" class="links">Contáctenos</a>
+        </li>
+        <li class="elementos_menu">
+           <a href="" class="links">Iniciar sesión</a>
+        </li>
+    </ul>
+    <h4 class="copy">&#169; | 2025 | Hillary Arraut, Adolfo Lecompte, Anuar Martínez, Esteban Redondo, Laura Reguillo, Deivis Yepez. </h4>
+
+    </footer>
+
+    <script src="../static/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

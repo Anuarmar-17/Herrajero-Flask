@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_inicio.css') }}">
+    <title>HERRAJERO S.A.S</title>
+    <link rel="icon" href="{{ url_for('static', filename='image/HERRAJERO_LOGO.png') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="{{ url_for('static', filename='image/HERRAJERO_LOGO.png') }}" alt="Logo" id="logo">
+            <nav>
+                {% if 'usuario_id' not in session %}
+                    <a href="{{ url_for('login') }}">Iniciar sesion</a>
+                    <a href="{{ url_for('register') }}">Registrarse</a>
+                {% endif %}
+                <a href="{{ url_for('productos') }}">Herramientas</a>
+                <a href="{{ url_for('construccion') }}">Construcción</a>
+                <a href="{{ url_for('electricidad') }}">Electricidad</a>
+                <a href="{{ url_for('cliente') }}"><img src="{{ url_for('static', filename='image/carro.png') }}" alt="carrito"></a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <section id="banner">
+        <h1>
+            Todo lo que necesitas para construir tus sueños
+        </h1>
+    </section>
+
+    <section id="productos">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="temas">
+                <div class="categoria">
+                    <h3>Herramientas</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto modi fugit, aspernatur tempora adipisci accusamus eaque nobis, expedita dicta repudiandae corrupti ex enim recusandae? Ipsum molestiae iste assumenda iure recusandae.</p>
+                    <button>
+                        <a href="{{ url_for('productos') }}">Ver más</a>
+                    </button>
+                </div>
+                <div class="categoria">
+                    <h3>Construcción</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto modi fugit, aspernatur tempora adipisci accusamus eaque nobis, expedita dicta repudiandae corrupti ex enim recusandae? Ipsum molestiae iste assumenda iure recusandae.</p>
+                    <button>
+                        <a href="{{ url_for('construccion') }}">Ver más</a>
+                    </button>
+                </div>
+                <div class="categoria">
+                    <h3>Electricidad</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto modi fugit, aspernatur tempora adipisci accusamus eaque nobis, expedita dicta repudiandae corrupti ex enim recusandae? Ipsum molestiae iste assumenda iure recusandae.</p>
+                    <button>
+                        <a href="{{ url_for('electricidad') }}">Ver más</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quienes_somos">
+        <div class="container">
+            <div class="img_1">
+            </div>
+            <div class="text">
+                <div class="text1">
+                    <h2>Quiénes Somos</h2>
+                    <p>Una ferretería de confianza con años de experiencia, ofreciendo productos de calidad y atención personalizada.
+                    Nuestra misión es facilitar proyectos con soluciones prácticas, asesoramiento experto y un servicio confiable.</p>
+                </div>
+                <div class="text2">
+                    <h2>Misión</h2>
+                    <p>Brindar a nuestros clientes soluciones prácticas y eficientes, asegurando productos de calidad y un servicio excepcional. Nos comprometemos a facilitar cada proyecto, ofreciendo asesoramiento experto y una experiencia de compra confiable y satisfactoria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="pie_pagina">
+        <ul class="icono_red">
+            <li class="logo_icono">
+                <a href="#!" class="icono_elemento">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="logo_icono">
+                <a href="#!" class="icono_elemento">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="logo_icono">
+                <a href="#!" class="icono_elemento">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="logo_icono">
+                <a href="#!" class="icono_elemento">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="elementos_menu">
+               <a href="#logo" class="links">Inicio</a>
+            </li>
+            <li class="elementos_menu">
+               <a href="#!" class="links">Contáctenos</a>
+            </li>
+            <li class="elementos_menu">
+               <a href="./ingreso.html" class="links">Iniciar sesión</a>
+            </li>
+        </ul>
+        <p class="copy">&#169; | 2025 | Hillary Arraut, Adolfo Lecompte, Anuar Martínez, Esteban Redondo, Laura Reguillo, Deivis Yepez. </p>
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

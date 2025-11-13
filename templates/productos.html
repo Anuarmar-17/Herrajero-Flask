@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_productos.css') }}">
+    <title>HERRAJERO S.A.S | Herramientas</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="{{ url_for('static', filename='image/HERRAJERO_LOGO.png') }}" alt="Logo">
+            <nav>
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                {% if 'usuario_id' not in session %}
+                    <a href="{{ url_for('login') }}">Iniciar sesion</a>
+                    <a href="{{ url_for('register') }}">Registrarse</a>
+                {% endif %}
+                <a href="{{ url_for('construccion') }}">construcción</a>
+                <a href="{{ url_for('electricidad') }}">Electricidad</a>
+                <a href="{{ url_for('cliente') }}"><img src="{{ url_for('static', filename='image/carro.png') }}" alt="carrito"></a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="banner">
+        <h1>
+            Catalogo de herramientas
+        </h1>
+    </section>
+
+    <main>
+        <div class="block_container">
+            <div class="block_category">
+                <h3>Categoria</h3>
+                <ul class="category">
+                    <li class="category_">
+                        <a href="{{ url_for('productos') }}">Herramientas</a>
+                    </li>
+                    <li class="category_">
+                        <a href="{{ url_for('construccion') }}">Construcción</a>
+                    </li>
+                    <li class="category_">
+                        <a href="{{ url_for('electricidad') }}">Electricidad</a>
+                    </li>
+                    <li class="category_"></li>
+                    <li class="category_"></li>
+                </ul>
+            </div>
+            <div class="block_product">
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://www.homecenter.com.co/static/activos-digitales/LANDING/GUIAS/g-herramientas-manuales-para-la-construccion-13082020-pala.jpg" alt="Pala">
+                    </div>
+                    <div class="description_product">
+                        <h4>Pala</h4>
+                        <p>Pala Para Excavar Pala Redonda Pequeña De 28 Pulgadas</p>
+                        <button class="agg_carrito">$ 100.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://images.adsttc.com/media/images/5be9/cc5b/08a5/e50e/3f00/0008/newsletter/Stanley_dynagrip_5_m_%C3%97_19_mm_33-684_01.jpg?1542048839" alt="Imagen de un metro de medir">
+                    </div>
+                    <div class="description_product">
+                        <h4>Metro</h4>
+                        <p>Cinta Metrica Flexómetro Contra Impactos 5 M Truper 14578</p>
+                        <button class="agg_carrito">$ 20.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://atlascopco.scene7.com/is/image/atlascopco/LS_14?$landscape800$" alt="Sierra para hormigón">
+                    </div>
+                    <div class="description_product">
+                        <h4>Sierra para hormigón</h4>
+                        <p>Máquina Cortadora De Ranuras De Hormigón De Acero,</p>
+                        <button class="agg_carrito">$ 700.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://crn.com.co/cdn/shop/files/PerforadoraNeumaticaYO18.jpg?v=1706370154" alt="Perforadora">
+                    </div>
+                    <div class="description_product">
+                        <h4>Perforadora</h4>
+                        <p>Perforadora neumática para perforación subterránea</p>
+                        <button class="agg_carrito">$ 900.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnKPTqMOBIup-7ZUH9Vj996o_FqokmR0Mz4g&s" alt="Juego de Pinzas">
+                    </div>
+                    <div class="description_product">
+                        <h4>Juego de Pinzas</h4>
+                        <p>Juego De Alicates 3 Piezas Comfort Grip Pretul 22966</p>
+                        <button class="agg_carrito">$ 80.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+                
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtfreeRVTvdXP7t7d81B4U6arHJblt2vZslA&s" alt="Pulidora">
+                    </div>
+                    <div class="description_product">
+                        <h4>Pulidora</h4>
+                        <p>Pulidora 4 -1/2 650w 12000rpm Black + Decker G650-b3 110</p>
+                        <button class="agg_carrito">$ 200.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLi6Hbon_AU_LB4LUiG7NNws8nlTT0Zva1w&s" alt="Martillo">
+                    </div>
+                    <div class="description_product">
+                        <h4>Martillo</h4>
+                        <p>Martillo Galponero Carpintero Madera 570grs Stanley 51-274</p>
+                        <button class="agg_carrito">$ 65.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://app.interfuerza.com/S7_files/COMPANIES/20181010IF00000000279KX2S5MC1N/eStore/MIGR000691/e3ea95fecfd6e9ad5e5525e6a06ebe69.jpg" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Palustre</h4>
+                        <p>Palaustre de albañil soldado pretul tipo diladelfia</p>
+                        <button class="agg_carrito">$ 60.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://m.media-amazon.com/images/I/61Qe03drECL._AC_SX569_.jpg" alt="Nivel">
+                    </div>
+                    <div class="description_product">
+                        <h4>Nivel y regla</h4>
+                        <p>Nivel y regla de torpedo magnético de 16 pulgadas, burbujas de 180/90/45 grados</p>
+                        <button class="agg_carrito">$ 25.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-oT1CL9vOmo92NHZAGAULbpK6kY89KwSvg&s">
+                    </div>
+                    <div class="description_product">
+                        <h4>Martillo con tapas de plastico</h4>
+                        <p>Martillo Tapas Plásticas 13oz Mango Fibra De Vidrio Urrea</p>
+                        <button class="agg_carrito">$ 300.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="data:image/jpeg;base64,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" alt="taladro minero">
+                    </div>
+                    <div class="description_product">
+                        <h4>taladro minero demoledor</h4>
+                        <p>Taladro Minero Demoledor Y Rotomartillo Industrial 110v</p>
+                        <button class="agg_carrito">$ 950.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="img_product">
+                        <img src="https://homesale.com.co/cdn/shop/files/kit-herramientas-manuales-50-pzs-maxtools-mt-hmk50ng-estuche-herramientas-max-tools-152229.jpg?v=1737211327" alt="">
+                    </div>
+                    <div class="description_product">
+                        <h4>Kit de herramientas</h4>
+                        <p>Kit Herramientas Manuales 50 Pzs Maxtools Mt-hmk50ng Estuche</p>
+                        <button class="agg_carrito">$ 200.000 <img src="{{ url_for('static', filename='image/carro.png') }}" alt=""></button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer id="pie_pagina">
+        <ul class="icono_red">
+            <li class="logo_icono">
+                <a href="" class="icono_elemento">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="logo_icono">
+                <a href="" class="icono_elemento">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="logo_icono">
+                <a href="" class="icono_elemento">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="logo_icono">
+                <a href="" class="icono_elemento">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="elementos_menu">
+               <a href="" class="links">Inicio</a>
+            </li>
+            <li class="elementos_menu">
+               <a href="" class="links">Contáctenos</a>
+            </li>
+            <li class="elementos_menu">
+               <a href="" class="links">Iniciar sesión</a>
+            </li>
+        </ul>
+        <h4 class="copy">&#169; | 2025 | Hillary Arraut, Adolfo Lecompte, Anuar Martínez, Esteban Redondo, Laura Reguillo, Deives Yepez. </h4>
+
+    </footer>
+    <script src="../static/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

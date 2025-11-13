@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_cliente.css') }}">
+    <title>HERRAJERO S.A.S | Usuario</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="{{ url_for('static', filename='image/HERRAJERO_LOGO.png') }}" alt="Logo">
+            <nav>
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                <a href="{{ url_for('productos') }}">Herramientas</a>
+                <a href="{{ url_for('construccion') }}">Construcción</a>
+                <a href="{{ url_for('electricidad') }}">Electricidad</a>
+                <a href="#!"><img src="{{ url_for('static', filename='image/carro.png') }}" alt="carrito"></a>
+                
+            </nav>
+        </div>
+    </header>
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+    <section class="cliente">
+        <div class="block_info">
+            <div class="block_data">
+                <div class="user">
+                    <div><img src="https://img.freepik.com/premium-vector/user-icon-icon_1076610-59410.jpg?w=360" alt=""></div>
+                    <div class="info">
+                            <p>Usuario</p>
+                            <p>Nombre y apellido</p>
+                            <p>DNI</p>
+                            <p>correo@gmail.com</p>
+                            <p>Teléfono</p>
+                            <p>Ciudad</p>
+                            <p>Dirección</p>
+                            {% if 'usuario_id' in session %}
+  <form action="{{ url_for('logout') }}" method="get">
+    <button type="submit">Cerrar sesión</button>
+  </form>
+{% endif %}
+
+                    </div>
+                </div>
+            </div>
+            <div class="block_category" id="carrito-contenido">
+                
+            </div>
+            <div class="block_factura">
+                <div class="container_factura">
+                    <div class="titulo">
+                        <h3>TOTAL DEL CARRITO</h3>
+                    </div>
+                    <div class="subtotal">
+                        <label for=""><strong>Subtotal</strong></label>
+                        <p id="subtotal">$0</p>
+                    </div>
+                    <div class="block_envio">
+                        <div class="envio">
+                            <label for=""><strong>Envio</strong></label>
+                        </div>
+                        <div class="envio_detalles">
+                            <ol>
+                                <ul>
+                                    <li><p>Envio a Juancho</p></li>
+                                    <li><p>Barranquilla</p></li>
+                                    <li><p>domicilio</p></li>
+                                </ul>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="iva">
+                        <label for=""><strong>IVA</strong></label>
+                        <p id="iva">$0</p>
+                    </div>
+                    <div class="total">
+                        <label for=""><strong>Total</strong></label>
+                        <p id="total">$0</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<script src="../static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+h1{
+    font-size: 3.5em;
+    color: white;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+h3{
+    font-size: 2em;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+ul{
+    list-style: none;
+}
+
+button a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+button a:hover{
+    color: #2f4958;
+}
+
+button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #2f4958 ;
+    color: white;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: white;
+    color: #2f4958;
+    padding: 15px 25px;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: azure;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+nav img{
+    height: 25px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+header a{
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2f4958;
+    transition: 0.5s;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+header a:hover{
+    color: whitesmoke;
+    background-color: #2f4958;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+#banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40vh;
+    background-image: url("https://tics.org.mx/share/software-para-supervision-de-obras-de-construccion1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+.block_container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block_category{
+    width: 20%;
+    text-align:start;
+}
+
+.category_, a{
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.block_product {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 20px; /* espacio entre productos */
+    padding-left: 40px;
+}
+
+.products {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.products:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.img_product img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+.img_product img:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+.description_product p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.compra_carrito{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.agg_carrito img{
+    height: 20px;
+    width: 20px;
+}
+
+.agg_carrito img{
+    height: 20px;
+    width: 20px;
+}
+
+.block_container button{
+    cursor: pointer;
+}
+
+#pie_pagina{
+    position: relative;
+    width: 100%;
+    min-width: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2f4958;
+    color: whitesmoke;
+}
+
+.icono_red{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;  
+}
+.logo_icono{
+    list-style-type: none;
+}
+
+
+.icono_elemento{
+    color: whitesmoke;
+    font-size: 40px;
+    display: inline-block;
+    margin: 0 15px;
+    transition: 0.2s;
+}
+
+.icono_elemento:hover{
+    transform: translateY(-10px)
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.elementos_menu{
+    list-style: none;
+}
+
+.links{
+    color: whitesmoke;
+    font-size: 25;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.links:hover{
+    background-color: whitesmoke;
+    color: #2f4958;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.copy{
+    font-size: 20px;
+}
+
+
+
+
+@media(min-width: 1900px ){
+    #banner{
+        height: 30vh;
+    }
+    .block_container{
+        text-decoration: none;
+    }
+    .block_category{
+        width: 30%;
+        padding-left: 70px;
+    }
+    .block_product {
+        width: 70%;
+        grid-template-columns: repeat(3, 1fr);
+}
+
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERRAJERO S.A.S | Inicio sesion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleingreso.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="{{ url_for('static', filename='image/HERRAJERO_LOGO.png') }}" alt="Logo">
+            <nav>
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                {% if 'usuario_id' not in session %}
+                    <a href="{{ url_for('register') }}">Registrarse</a>
+
+                {% endif %}
+                <a href="{{ url_for('productos') }}">Herramientas</a>
+                <a href="{{ url_for('construccion') }}">construcción</a>
+                <a href="{{ url_for('electricidad') }}">Electricidad</a>
+                {% if 'usuario_id' in session %}
+                    <a href="{{ url_for('cliente') }}"><img src="{{ url_for('static', filename='image/carro.png') }}" alt="carrito"></a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+    <section class="contenido">
+        <!--<img src="../image/J4GM4UMBFVBCXNICOFY55KVABE.avif" alt="" class="fondo">-->
+        <div class="formulario">
+            <div>
+                <h1>Inicio</h1>
+            </div>
+            <form action="{{ url_for('login') }}" method="post"><!--Los datos dentro de la etiqueta se envian al servidor-->
+                
+                <div class="username">
+                    <img src="{{ url_for('static', filename='image/bxs-envelope.png') }}" alt="" class="icon">                    
+                    <input type="email" name="email" required placeholder="Correo electronico" id="correo">
+                </div>
+                <div class="password">
+                    <img src="{{ url_for('static', filename='image/bxs-lock-alt.png') }}" alt="" class="icon">
+                    <input type="password" name="clave" required placeholder="Contraseña" id="clave">
+                </div>
+                <div class="remember">
+                    <input type="checkbox">Recordar
+                </div>
+                <div class="recordar">
+                    <a href="#!">Has olvidado tu contraseña?</a>
+                </div>
+                <div class="login">
+                    <input type="submit" value="Ingresar">
+                </div>
+                <div class="registro">
+                    <a href="./formulario.html">Registrarse</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer id="pie_pagina">
+        <div class="icono_red">
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+
+            <a href="" class="icono_elemento">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="" class="links">Inicio</a>
+            
+            <a href="#!" class="links">Contáctenos</a>
+
+            <a href="/herrajero_inicio_sesion/Login/Ingreso.html" class="links">Iniciar sesión</a>
+        </div>
+        <div class="copyr">
+            <p class="copy">&#169; | 2025 | Hillary Arraut, Adolfo Lecompte, Anuar Martínez, Esteban Redondo, Laura Reguillo, Deivis Yepez. </p>
+        </div>
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../static/app.js"></script>
+</body>
+</html>

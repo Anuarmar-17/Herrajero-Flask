@@ -1,0 +1,271 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+h1{
+    font-size: 3.5em;
+    color: white;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+h3{
+    font-size: 2em;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+ul{
+    list-style: none;
+}
+
+button a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+button a:hover{
+    color: #2f4958;
+}
+
+button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #2f4958 ;
+    color: white;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: white;
+    color: #2f4958;
+    padding: 15px 25px;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: azure;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+nav img{
+    height: 25px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+header a{
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2f4958;
+    transition: 0.5s;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+header a:hover{
+    color: whitesmoke;
+    background-color: #2f4958;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+#banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40vh;
+    background-image: url("image/banner_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    margin-bottom: 10rem;
+}
+
+#productos{
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+
+#productos p{
+    display: none;
+}
+
+#productos h2{
+    color: #2f4958;
+    font-size: 3em;
+}
+
+
+.temas .categoria{
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    margin: 25px;
+    border-radius: 20px;
+}
+
+.temas h3{
+    color: whitesmoke;
+}
+
+.categoria:first-child{
+    background-image: url(image/herramientas.jpg);
+}
+
+.categoria:nth-child(2){
+    background-image: url(image/construccion.jpg);
+}
+
+.categoria:nth-child(3){
+    background-image: url(image/electricidad.jpg);
+}
+
+#quienes_somos .container{
+    text-align: center;
+    padding: 100px 25px;
+    display: flex;
+    justify-content:space-between;
+    gap: 3rem;
+    height: auto;
+
+}
+
+.img_1{
+    width: 50%;
+}
+
+#quienes_somos .text{
+    width: 50%;
+    border-radius: 20px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#quienes_somos .text1, .text2{
+    background-color: #2f4958;
+    border-radius: 15px;
+    height: 50%;
+}
+
+
+@media(min-width:720px){
+    #quienes_somos .img_1{
+        background-image: url(image/FIERROS.png);
+        background-size: cover;
+        background-position: center;
+        height: 700px;
+        width: 600px;
+        border-radius: 20px;
+    }
+}
+
+#pie_pagina{
+    width: 100%;
+    min-width: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2f4958;
+    color: whitesmoke;
+}
+
+.icono_red{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;  
+}
+.logo_icono{
+    list-style-type: none;
+}
+
+
+.icono_elemento{
+    color: whitesmoke;
+    font-size: 40px;
+    display: inline-block;
+    margin: 0 15px;
+    transition: 0.2s;
+}
+
+.icono_elemento:hover{
+    transform: translateY(-10px)
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.elementos_menu{
+    list-style: none;
+}
+
+.links{
+    color: whitesmoke;
+    font-size: 25;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.links:hover{
+    background-color: whitesmoke;
+    color: #2f4958;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.copy{
+    font-size: 20px;
+}

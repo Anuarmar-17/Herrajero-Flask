@@ -1,0 +1,316 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+h1{
+    font-size: 3.5em;
+    color: white;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+h3{
+    font-size: 2em;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+ul{
+    list-style: none;
+}
+
+button a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+button a:hover{
+    color: #2f4958;
+}
+
+button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #2f4958 ;
+    color: white;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: white;
+    color: #2f4958;
+    padding: 15px 25px;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: azure;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+
+}
+
+nav img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+
+header a{
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2f4958;
+    transition: 0.5s;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+header a:hover{
+    color: whitesmoke;
+    background-color: #2f4958;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.cliente{
+    background-color: whitesmoke;
+    width: 100%;
+    height: auto;
+}
+.block_info{
+    background-color: white;
+    width: 100%;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    height: 90vh;
+    overflow: hidden;
+}
+.block_data{
+    background-color: whitesmoke;
+    width: 22%;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    position: sticky;
+    align-self: flex-start; /* necesario en Flexbox */
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none 1px solid;
+    border-radius: 20px;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+.user img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+.user p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 1.1rem;
+}
+.block_category{
+    background-color: whitesmoke;
+    width: 50%;
+    height: auto;
+    padding: 0 10px;
+    margin: 0;
+    border-radius: 30px;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.carrito_vacio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contenido{
+    margin: 20px 40px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+.pedido{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border: transparent 1px solid;
+    border-radius: 10px;
+}
+.imagen_pedidos{
+    padding: 10px;
+}
+.imagen_pedidos img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid none;
+}
+.descripcion_pedidos{
+    padding: 0 20px;
+    width: 100%;
+}
+.descripcion_pedidos h4{
+    margin: 0;
+    padding: 0;
+}
+.descripcion_pedidos p{
+    font-size: 1.1rem;
+}
+.eliminar_pedidos{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eliminar{
+    all: unset;
+    transition: 0.5s;
+}
+.eliminar:hover{
+    transition: 0.5s;
+    padding-right: 5px;
+    margin: 0;
+}
+.eliminar_pedidos img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+
+.block_factura{
+    background-color: whitesmoke;
+    width: 25%;
+    padding: 20px;
+    margin: 0;
+    border-radius: 30px;
+    position: sticky;
+    align-self: flex-start; /* necesario en Flexbox */
+}
+.container_factura{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.container_factura p{
+    font-size: 1.1rem;
+}
+.titulo{
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+}
+.titulo h3{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+.subtotal{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.block_envio{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.envio{
+    display: flex;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+}
+.envio_detalles{
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    margin: 0;
+}
+.envio_detalles p{
+    text-align: end;
+    align-items: end;
+    padding: 3px 0;
+    margin: 0;
+}
+.iva{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.total{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+}
