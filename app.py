@@ -15,9 +15,9 @@ app.config['MYSQL_DB'] = config.DATABASE['db']
 
 mysql = MySQL(app)
 
-'''@app.route('/')
+@app.route('/')
 def index():
-    return "¡Flask conectado a MySQL correctamente!"'''
+    return redirect('inicio.html')
 
 
 # Codigo para registrar un usuario
