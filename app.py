@@ -17,7 +17,7 @@ mysql = MySQL(app)
 
 @app.route('/')
 def index():
-    return redirect('inicio.html')
+    return redirect(url_for('inicio'))
 
 
 # Codigo para registrar un usuario
