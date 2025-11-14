@@ -68,9 +68,9 @@ def login():
             return redirect(url_for('cliente'))
         else:
             flash('Credenciales incorrectas')
-            return render_template('Ingreso.html')
+            return render_template('ingreso.html')
 
-    return render_template('Ingreso.html')
+    return render_template('ingreso.html')
 
 
 # Código para la página del cliente
