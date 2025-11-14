@@ -30,8 +30,8 @@ def register():
         telefono = request.form['telefono']
         fecha_nacimiento = request.form['fecha_nacimiento']
         email = request.form['email']
-        clave = request.form['password']  # name="password" en el formulario
-        id_rol = 2  # Cliente
+        clave = request.form['password']
+        id_rol = 2
 
         cur = mysql.connection.cursor()
         cur.execute("""INSERT INTO usuario 
@@ -46,7 +46,6 @@ def register():
     
     return render_template('formulario.html')
 
-
 # Codigo para iniciar sesión
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -55,7 +54,8 @@ def login():
         clave = request.form['clave']
 
         cur = mysql.connection.cursor()
-        cur.execute("SELECT id_usuario, nombre, email FROM usuario WHERE email = %s AND password = %s", (email, clave))
+        cur.execute("SELECT id_usuario, nombre, email FROM usuario WHERE email = %s AND password = %s",
+                    (email, clave))
         usuario = cur.fetchone()
         cur.close()
 
