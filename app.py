@@ -70,7 +70,7 @@ def login():
             flash('Credenciales incorrectas')
             return render_template('ingreso.html')
 
-    return render_template('ingreso.html')
+    return render_template('Ingreso.html')
 
 
 # Código para la página del cliente
