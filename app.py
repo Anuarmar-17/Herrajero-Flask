@@ -55,14 +55,14 @@ def login():
         clave = request.form['clave']
 
         cur = mysql.connection.cursor()
-        cur.execute("SELECT * FROM usuario WHERE email = %s AND password = %s", (email, clave))
+        cur.execute("SELECT id_usuario, nombre, email FROM usuario WHERE email = %s AND password = %s", (email, clave))
         usuario = cur.fetchone()
         cur.close()
 
         if usuario:
-            session['usuario_id'] = usuario[0]   # ID
-            session['nombre'] = usuario[1]       # Nombre
-            session['email'] = usuario[7]        # Email correcto
+            session['usuario_id'] = usuario[0]
+            session['nombre'] = usuario[1]
+            session['email'] = usuario[2]
 
             flash('Inicio de sesión exitoso')
             return redirect(url_for('cliente'))
