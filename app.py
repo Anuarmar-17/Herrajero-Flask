@@ -30,17 +30,17 @@ def register():
         telefono = request.form['telefono']
         fecha_nacimiento = request.form['fecha_nacimiento']
         email = request.form['email']
-        clave = request.form['password']  # El input del formulario sigue siendo name="password"
-        id_rol = 2  # Suponiendo que "2" es el rol para cliente
+        clave = request.form['password']  # name="password" en el formulario
+        id_rol = 2  # Cliente
 
         cur = mysql.connection.cursor()
         cur.execute("""INSERT INTO usuario 
-                       (nombre, apellido, direccion, telefono, fecha_nacimiento, email, clave, id_rol)
+                       (nombre, apellido, direccion, telefono, fecha_nacimiento, email, password, id_rol)
                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)""",
                     (nombre, apellido, direccion, telefono, fecha_nacimiento, email, clave, id_rol))
         mysql.connection.commit()
         cur.close()
-        #return "Usuario registrado correctamente"
+
         flash('Usuario registrado correctamente')
         return redirect(url_for('login'))
     
@@ -55,21 +55,23 @@ def login():
         clave = request.form['clave']
 
         cur = mysql.connection.cursor()
-        cur.execute("SELECT * FROM usuario WHERE email = %s AND clave = %s", (email, clave))
+        cur.execute("SELECT * FROM usuario WHERE email = %s AND password = %s", (email, clave))
         usuario = cur.fetchone()
         cur.close()
 
         if usuario:
             session['usuario_id'] = usuario[0]   # ID
             session['nombre'] = usuario[1]       # Nombre
-            session['email'] = usuario[6]        # Email, ajusta índice si cambia orden
+            session['email'] = usuario[7]        # Email correcto
 
             flash('Inicio de sesión exitoso')
-            return redirect(url_for('cliente'))  # <--- Aquí va la redirección
+            return redirect(url_for('cliente'))
         else:
             flash('Credenciales incorrectas')
             return render_template('ingreso.html')
+
     return render_template('ingreso.html')
+
 
 # Código para la página del cliente
 @app.route('/cliente')
